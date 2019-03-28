@@ -1,0 +1,20 @@
+@import "./lib/reset.scss";
+
+/* 取消默认导航条样式 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "\a0";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}

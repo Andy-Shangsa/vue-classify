@@ -1,0 +1,142 @@
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Source Han Sans CN", "Droid Sans Fallback", "Noto SansCJK",
+    Helvetica, STHeitiTC, sans-serif;
+  font-size: 100%;
+  outline: none;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+ul,
+li,
+dt,
+dl,
+dd {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+cite {
+  font-style: normal;
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  &:link,
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+pre {
+  padding: 0px;
+  margin: 0px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-color: transparent;
+  border: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
