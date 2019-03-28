@@ -2,6 +2,8 @@
 
     一款基于vue可左右联动的商城分类插件
 
+### 预览
+
 ### Installation
 
 ##### install with NPM
@@ -22,7 +24,7 @@
 ###### 常规
 
     <v-classify :classifyList="classifyList"></v-classify>
-
+    
     data() {
         return {
             classifyList: [
@@ -49,7 +51,7 @@
 ###### 自定义字段
 
      <v-classify :classifyList="classifyList" :keyOptions="keyOptions" :height="height"></v-classify>
-
+    
      data() {
         return {
             classifyList: [

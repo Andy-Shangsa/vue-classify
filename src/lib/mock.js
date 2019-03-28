@@ -1,6 +1,6 @@
 export const _CLASSIFY_LIST = [
   {
-    name: "iphone",
+    name: "苹果",
     key: "iphone",
     list: [
       { id: 25827, name: "苹果 iPhone X", avgPrice: 5228, imgUrl: null },

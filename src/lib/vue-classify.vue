@@ -53,7 +53,11 @@
                 v-for="(item, i) in list[listKey]"
                 :key="i"
               >
-                <span class="index">{{i + 1}}</span>
+                <i
+                  v-if="i < 3"
+                  class="iconfont icon-hot"
+                  :class="iconCls(i)"
+                ></i>
                 <span class="name"> {{item[listNameKey]}} </span>
               </div>
             </div>
@@ -119,6 +123,15 @@ export default {
     this.init();
   },
   methods: {
+    iconCls(i) {
+      if (i === 0) {
+        return "red";
+      } else if (i === 1) {
+        return "purple";
+      } else if (i === 2) {
+        return "blue";
+      }
+    },
     // 初始化
     init() {
       this.innerHeight = this.height || window.innerHeight + "px";
@@ -228,16 +241,20 @@ export default {
     background: #fafafa;
     &-item {
       text-align: center;
-      font-size: 13px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       &.active {
         position: relative;
         background-color: #fff;
+        font-weight: 600;
         &::before {
           content: "\a0";
           position: absolute;
           left: 0;
           top: 50%;
-          height: 30px;
+          height: 36px;
           width: 3px;
           background-color: #02b997;
           transform: translate(0, -50%);
@@ -266,17 +283,49 @@ export default {
     }
     &-item {
       padding: 0 15px 0 20px;
-      height: 46px;
-      line-height: 46px;
+      height: 52px;
+      line-height: 52px;
       box-sizing: border-box;
       font-size: 15px;
       color: #111;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      .index + .name {
-        margin-left: 12px;
+      .name {
+         margin-left: 30px;
       }
+      .icon-hot + .name {
+        margin-left: 8px;
+      }
+      .icon-hot {
+        font-size: 18px;
+        &.red {
+          color: #e91e63;
+        }
+        &.purple {
+          color: #9c27b0;
+        }
+        &.blue {
+          color: #03a9f4;
+        }
+      }
+    }
+  }
+  .classify-wrap-item + .classify-wrap-item {
+    position: relative;
+    &::before {
+      content: "\a0";
+      position: absolute;
+      z-index: 1;
+      height: 1px; /* no */
+      top: 0px;
+      left: 20px;
+      right: 0px;
+      background-color: #e6e5ea;
+      transform: scaleY(0.5);
+      -webkit-transform: scaleY(0.5);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
     }
   }
 }
