@@ -6,4 +6,9 @@
 
 ##### install with NPM
 
-    npm i andy-classify -S
+    npm i v-classify -S
+
+#### 引入插件
+
+    import vClassify from "vClassify";
+    Vue.use(vClassify);
